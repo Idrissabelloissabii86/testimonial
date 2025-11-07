@@ -1,0 +1,222 @@
+/* Style globale */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid; */
+}
+:root{
+    --lineaire-pink: #ff6b6b;
+    --lineaire-wgreen: #4ecdc4;
+    --lineaire-div1: #45b7d1;
+    --lineaire-yellow: #f9ca24;
+    --lineaire-violet: #a55eea;
+    --lineaire-green: #26de81;
+}
+.flex{
+    display: flex;
+    display: flex;
+}
+body{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0 60px 0;
+}
+header p{
+    font-size: 1.2rem;
+}
+main{
+    justify-content: center;
+    
+}
+h1{
+    font-size: 2.5rem;
+}
+
+h3{
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.container {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 40px;
+    margin: auto;
+}
+.div1 {
+    grid-column: span 2 / span 2;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+    background: 
+    linear-gradient(white) padding-box, /* Fond interne */
+    linear-gradient(90deg, var(--lineaire-pink), var(--lineaire-div1), var(--lineaire-yellow)) border-box;
+}
+
+.div2 {
+    grid-column-start: 3;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+    background: 
+    linear-gradient(white) padding-box, /* Fond interne */
+    linear-gradient(90deg, var(--lineaire-div1), var(--lineaire-pink), var(--lineaire-div1), var(--lineaire-yellow)) border-box;
+}
+
+.div3 {
+    grid-row-start: 2;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+    background: 
+    linear-gradient(white) padding-box, /* Fond interne */
+    linear-gradient(90deg, var(--lineaire-div1), var(--lineaire-pink), var(--lineaire-div1), var(--lineaire-yellow)) border-box;
+}
+
+.div4 {
+    grid-row-start: 2;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+    background: 
+    linear-gradient(white) padding-box, /* Fond interne */
+    linear-gradient(90deg, var(--lineaire-yellow), var(--lineaire-pink), var(--lineaire-div1), var(--lineaire-yellow)) border-box;
+}
+
+.div5 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+    background: 
+    linear-gradient(white) padding-box, /* Fond interne */
+    linear-gradient(90deg, var(--lineaire-pink), var(--lineaire-div1), var(--lineaire-yellow)) border-box;
+}
+
+.div6 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+    background: 
+    linear-gradient(white) padding-box, /* Fond interne */
+    linear-gradient(90deg, var(--lineaire-green), var(--lineaire-pink), var(--lineaire-div1), var(--lineaire-yellow)) border-box;
+}
+
+.div7 {
+    grid-row-start: 4;
+    border-top: 4px solid transparent;
+    border-left: 4px solid transparent;
+    background: 
+    linear-gradient(white) padding-box, /* Fond interne */
+    linear-gradient(90deg, var(--lineaire-pink), var(--lineaire-div1), var(--lineaire-yellow)) border-box;
+}
+.card{
+    color: #000;
+    padding: 25px;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.2);
+    transition: 1s ease;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.card h1{
+    font-size: 25px;
+}
+.card_header{
+    gap: 15px;
+    justify-content: space-between;
+    width: 100%;
+}
+.profile-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+}
+.stars{
+    align-items: center;
+    color: rgb(255, 208, 0);
+    font-size: 1.2rem;
+}
+.image-name{
+    width: 90%;
+    align-items: center;
+    gap: 10px;
+}
+.card-p{
+    color: #666;
+    font-size: 0.9rem;
+}
+.name_statut p{
+    color: #555;
+}
+
+@media (max-width:768px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        margin-bottom: 20px;
+        gap: 15px;
+        width: 95%;
+    }
+    .div1{
+        grid-column: span 3 / span 3;
+    }
+    .div2{
+        grid-column: span 3 / span 3;
+        grid-row-start: 2;
+    }
+    .div3{
+        grid-column: span 3 / span 3;
+        grid-row-start: 3;
+    }
+    .div4{
+        grid-column: span 3 / span 3;
+        grid-row-start: 4;
+    }
+    .div5{
+        grid-column: span 3 / span 3;
+        grid-row-start: 5;
+    }
+    .div6{
+        grid-column: span 3 / span 3;
+        grid-row-start: 6;
+    }
+    .div7{
+        grid-column: span 3 / span 3;
+        grid-row-start: 7;
+    }
+}
+
+@media (max-width: 425px){
+    .image-name{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card_header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .name_statut{
+        text-align: center;
+    }
+}
+
+        
